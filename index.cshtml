@@ -1,9 +1,15 @@
-@using System.Configuration
-@{
-    ViewBag.Title = "Home Page";
+using System.Configuration;
+ 
+namespace aspnet.config
+{
+    public class Configuration
+    {
+        public static string ConnectionInfo
+        {
+            string name=ConfiguratioManager.AppSettings["ConnectionInfo"];
+        }
+    }
 }
-
-<div class="jumbotron">
-    <h1>Testing App Settings</h1>
-    @ConfigurationManager.AppSettings["logfilelocation"]
-</div>
+<?php
+  echo "name";
+?>
