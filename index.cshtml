@@ -1,16 +1,5 @@
-using System.Configuration;
- 
-namespace aspnet.config
-{
-    public class Configuration
-    {
-        public static string ConnectionInfo
-        {
-            string name=ConfiguratioManager.AppSettings["logfilelocation"];
-        }
-    }
-}
-<?php
-  $var1=name;
-  echo "$var1";
-?>
+@using System.Configuration
+<div class="jumbotron">
+    <h1>Testing App Settings</h1>
+    @ConfigurationManager.AppSettings["logfilelocation"]
+</div>
